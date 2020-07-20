@@ -24,6 +24,7 @@ const create_item = () => {
   item.addEventListener('dragend', event => event.dataTransfer.clearData(event));
   
   let input = document.createElement('input');
+  item.appendChild(input);
 
   let save_btn = document.createElement('button');
   save_btn.innerHTML = 'Save';
@@ -37,7 +38,7 @@ const create_item = () => {
       error.innerHTML = message;
     }
   });
-  item.append(save_btn);
+  item.appendChild(save_btn);
 };
 
 document.querySelectorAll('.drop').forEach(element => {
