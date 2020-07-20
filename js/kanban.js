@@ -39,6 +39,8 @@ const create_item = () => {
     }
   });
   item.appendChild(save_btn);
+
+  return item;
 };
 
 document.querySelectorAll('.drop').forEach(element => {
